@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="9" time="103.472">
+<testcase classname="register with valid data" name="user put his valid data" time="11.476">
+<system-out><![CDATA[Given user open register page...............................................passed
+And user chose his gender...................................................passed
+And user put his first and last name........................................passed
+And user put his birthday data..............................................passed
+And user put his email"aliaa@gmial.com".....................................passed
+And user put his Company name...............................................passed
+And user put his password"1234567"..........................................passed
+And user put his Confirm password...........................................passed
+When user enter register....................................................passed
+Then success massage will appear............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user login" name="guest user could Login with valid credentials" time="9.096">
+<system-out><![CDATA[Given user open login page..................................................passed
+And user put his email"aliaa@gmial.com".....................................passed
+And user put his password"1234567"..........................................passed
+When user enter login.......................................................passed
+Then user can see my account display........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could switch between currencies" name="guest user could switch between currencies" time="8.839">
+<system-out><![CDATA[Given Select “Euro” from currency dropdown..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can hover and select from different category" name="user can hover and select from different category" time="14.278">
+<system-out><![CDATA[Given user chose any category...............................................passed
+And select a product........................................................passed
+And user chose anther category..............................................passed
+And user chose anther product...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search for any product" name="user could search for any product" time="10.015">
+<system-out><![CDATA[Given user writ any product in search.......................................passed
+When user click search button...............................................passed
+Then user go to page1.......................................................passed
+And user can search for product by using SKU................................passed
+When user click search button2..............................................passed
+Then user go to page........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could click in slider wrapper" name="verify that guest user could click in slider wrapper" time="6.901">
+<failure message="The following asserts failed:&#10;&#9;nokia expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user click in slider wrapper1..........................................passed
+Then nokia page open........................................................failed
+When user click in slider wrapper2..........................................skipped
+Then iphone page open.......................................................skipped
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	nokia expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at definition.sc6_definition.page_open(sc6_definition.java:21)
+	at ✽.nokia page open(file:///C:/Users/Habiba/IdeaProjects/maven/src/main/resources/Features/sc6.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="confirm&quot;follow us&quot; links open" name="confirm&quot;follow us&quot; links open the corresponding websites" time="8.862">
+<system-out><![CDATA[Given user go to follow us and click in facebook icon.......................passed
+And user will go to page in facebook........................................passed
+And user go to follow us and click in twitter icon..........................passed
+Then user will go to page in twitter........................................passed
+When user go to follow us and click in youtube icon.........................passed
+Then user will go to page in youtube........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add in wish list" name="user can add product in wish list" time="14.309">
+<system-out><![CDATA[Given user select product by category.......................................passed
+When click on product to add to wish list...................................passed
+Then Success massage will show..............................................passed
+And user click on product2 wish icon........................................passed
+When click on product2 to add to wish list..................................passed
+Then Success2 massage will show.............................................passed
+Then wish list table will show..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user add product" name="user add product to cart" time="19.457">
+<system-out><![CDATA[Given user chose product that he want.......................................passed
+When add to cart............................................................passed
+Then success massage will show..............................................passed
+And add product by category.................................................passed
+And chose  product..........................................................passed
+When add product............................................................passed
+Then success  will show.....................................................passed
+Then table of shop cart will show...........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
